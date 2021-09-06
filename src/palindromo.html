@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>"Palindromo!</title>
+
+<script>
+function calcPalindromo(){
+var palavra = document.getElementById('palindromo').value;
+var tamanho = palavra.length;
+var metade = Math.floor(tamanho/2);
+var isPalindromo = true;
+var resposta;
+
+    for (var i=0 ; i<= metade; i++)
+    {
+        
+        if (palavra[i] !== palavra[tamanho-i-1])
+        {
+        
+            isPalindromo = false;
+        }
+    }
+
+if (isPalindromo == true) 
+{
+    resposta ='É palindromo';
+}
+else 
+{
+    resposta ='Não é palindromo';
+}
+
+document.getElementById('result').innerHTML=resposta;
+return false
+}
+</script>
+
+</head>
+<body>
+<form>
+<p>Insira a palavra a ser verificada<input type="text" id="palindromo" /></p>
+<input type="button" onClick="calcPalindromo()" value="Calcular" />
+</form>
+<div id="result"></div>
+</body>
+</html>
+    

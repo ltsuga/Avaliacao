@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Multiplicacao Sem *</title>
+
+<script>
+function calcMulti(){
+var numOne = parseInt(document.getElementById('num1').value);
+var numTwo = parseInt(document.getElementById('num2').value);
+var resultado = parseInt(0);
+
+if (numOne > 0)
+{
+    for (var i=1 ; i <= numOne; i++)
+    {
+            resultado = resultado + numTwo
+    }
+
+}else if (numOne<0){
+    for (var i=-1 ; i >= numOne; i--)
+    {
+            resultado = resultado - numTwo
+    }
+
+}
+
+document.getElementById('result').innerHTML=resultado;
+return false
+}
+</script>
+
+</head>
+<body>
+<form>
+<p>Insira o numero 1<input type="text" id="num1" /></p>
+<p>Insira o numero 2<input type="text" id="num2" /></p>
+<input type="button" onClick="calcMulti()" value="Calcular" />
+</form>
+<div id="result"></div>
+</body>
+</html>

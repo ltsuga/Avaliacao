@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Fatorial!</title>
+
+<script>
+function calcFatorial(){
+var N = document.getElementById('fatorial').value;
+var nFatorial = 1
+
+for (var i=1 ; i<=N ; i++)
+{
+  nFatorial = nFatorial * i
+}
+
+document.getElementById('result').innerHTML=nFatorial;
+return false
+}
+</script>
+
+</head>
+<body>
+<form>
+<p>Insira o numero para calcular o fatorial<input type="text" id="fatorial" /></p>
+<input type="button" onClick="calcFatorial()" value="Calcular" />
+</form>
+<div id="result"></div>
+</body>
+</html>
